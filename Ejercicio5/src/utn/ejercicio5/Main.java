@@ -23,7 +23,7 @@ public class Main {
     {
         Scanner scanner = new Scanner(System.in);
         Calculadora calculadora = new Calculadora();
-        String operacion;
+        int operacion;
         Number numeroUno;
         Number numeroDos;
         double resultado;
@@ -32,27 +32,27 @@ public class Main {
         numeroUno = scanner.nextDouble();
         System.out.println("Ingrese segundo numero");
         numeroDos = scanner.nextDouble();
-        System.out.println("Seleccione operacion:\n (+) Suma\n (-) Resta\n (*) Multiplicacion\n (/) División");
+        System.out.println("Seleccione operacion:\n (1) Suma\n (2) Resta\n (3) Multiplicacion\n (4) División");
         scanner.nextLine();
-        operacion = scanner.nextLine();
+        operacion = scanner.nextInt();
 
         try
         {
             switch (operacion)
             {
-                case "+" :
+                case 1 :
                     resultado = calculadora.sumar(numeroUno,numeroDos);
                     System.out.println("resultado = " + resultado);
                     break;
-                case "-" :
+                case 2 :
                     resultado = calculadora.restar(numeroUno,numeroDos);
                     System.out.println("resultado = " + resultado);
                     break;
-                case "*" :
+                case 3 :
                     resultado = calculadora.multiplicar(numeroUno,numeroDos);
                     System.out.println("resultado = " + resultado);
                     break;
-                case "/" :
+                case 4 :
                     resultado = calculadora.dividir(numeroUno,numeroDos);
                     System.out.println("resultado = " + resultado);
                     break;
