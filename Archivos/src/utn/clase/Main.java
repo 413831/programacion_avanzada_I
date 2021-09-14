@@ -32,22 +32,24 @@ public class Main {
         File fileOutput = new File("imagen.jpeg");
         File fileCopy = new File("copia.jpeg");
 
-        FileInputStream fileInputStream = new FileInputStream(fileOutput);
-        BufferedInputStream inputStream = new BufferedInputStream(fileInputStream);
-
-        FileOutputStream fileOutputStream = new FileOutputStream(fileCopy);
-        BufferedOutputStream outputStream = new BufferedOutputStream(fileOutputStream);
-
-        byte[] aux = new byte[1000];
-
-        int cantidad = 0;
-        while((cantidad = inputStream.read(aux,0,1000)) != -1)
+        try(BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(fileOutput));
+            BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream(fileCopy)))
         {
-            outputStream.write(aux,0,cantidad);
+            byte[] aux = new byte[1000];
+
+            int cantidad = 0;
+            while((cantidad = inputStream.read(aux,0,1000)) != -1)
+            {
+                outputStream.write(aux,0,cantidad);
+            }
+            outputStream.flush();
+            //outputStream.close();
+            //inputStream.close();
         }
-        outputStream.flush();
-        outputStream.close();
-        inputStream.close();
+        catch (IOException exception)
+        {
+            exception.printStackTrace();
+        }
     }
 
     public static void leer(File archivo) throws IOException
