@@ -6,7 +6,8 @@ public class Main {
 
     public static void main(String[] args)
     {
-        File archivo = new File("archivo.txt");
+        //File archivo = new File("archivo.txt");
+
 
         /*if(!archivo.exists())
         {
@@ -14,13 +15,39 @@ public class Main {
         }*/
         try
         {
-            escribir(archivo);
-            leer(archivo);
+            leerBinario();
+            //escribir(archivo);
+            //leer(archivo);
         }
         catch (IOException exception)
         {
             System.out.println("exception.getMessage() = " + exception.getMessage());
         }
+    }
+
+
+
+    public static void leerBinario() throws IOException
+    {
+        File fileOutput = new File("imagen.jpeg");
+        File fileCopy = new File("copia.jpeg");
+
+        FileInputStream fileInputStream = new FileInputStream(fileOutput);
+        BufferedInputStream inputStream = new BufferedInputStream(fileInputStream);
+
+        FileOutputStream fileOutputStream = new FileOutputStream(fileCopy);
+        BufferedOutputStream outputStream = new BufferedOutputStream(fileOutputStream);
+
+        byte[] aux = new byte[1000];
+
+        int cantidad = 0;
+        while((cantidad = inputStream.read(aux,0,1000)) != -1)
+        {
+            outputStream.write(aux,0,cantidad);
+        }
+        outputStream.flush();
+        outputStream.close();
+        inputStream.close();
     }
 
     public static void leer(File archivo) throws IOException
