@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"utn.ejercicio5","l":"Calculadora"},{"p":"utn.ejercicio5","l":"ICalcular"},{"p":"utn.ejercicio5","l":"Main"},{"p":"utn.ejercicio5","l":"MiExcepcion"}];updateSearchResults();

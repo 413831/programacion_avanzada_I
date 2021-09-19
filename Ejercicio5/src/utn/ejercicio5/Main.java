@@ -3,7 +3,7 @@ package utn.ejercicio5;
 import java.util.Scanner;
 
 /**
- * 5. Cree una interface llamada ICalcular, que tenga los siguientes métodos: ∙
+ * Ejercicio 5: Cree una interface llamada ICalcular, que tenga los siguientes métodos: ∙
  * sumar
  * ∙ restar
  * ∙ multiplicar
@@ -16,9 +16,12 @@ import java.util.Scanner;
  * sistema debe mostrar por consola el resultado. Utilice la estructura switch para la
  * ejecución de los métodos.
  */
-
 public class Main {
 
+    /**
+     * Implementación de la Calculadora
+     * @param args Parámetros estandar de aplicacion
+     */
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);

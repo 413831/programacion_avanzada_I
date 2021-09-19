@@ -1,5 +1,9 @@
 package utn.ejercicio5;
 
+/**
+ * Clase para realizar operaciones aritméticas
+ * Implementa interfaz ICalcular
+ */
 public class Calculadora implements ICalcular
 {
     /**
@@ -43,7 +47,7 @@ public class Calculadora implements ICalcular
      * @param numeroUno Número dividendo
      * @param numeroDos Número divisor
      * @return Se retorna el resultado de la división
-     * @throws MiExcepcion
+     * @throws MiExcepcion en caso de que el divisor sea igual a 0 (Cero)
      */
     @Override
     public double dividir(Number numeroUno, Number numeroDos) throws MiExcepcion
