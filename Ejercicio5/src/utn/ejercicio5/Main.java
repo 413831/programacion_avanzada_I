@@ -15,6 +15,8 @@ import java.util.Scanner;
  * usuario debe ingresar la operación deseada y los valores requeridos por el método. El
  * sistema debe mostrar por consola el resultado. Utilice la estructura switch para la
  * ejecución de los métodos.
+ * @author Alejandro Planes
+ * @version 1.0
  */
 public class Main {
 

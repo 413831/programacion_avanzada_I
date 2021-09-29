@@ -2,6 +2,8 @@ package utn.ejercicio5;
 
 /**
  * Implementación de Excepcion propia para clase Calculadora
+ * @author Alejandro Planes
+ * @version 1.0
  */
 public class MiExcepcion extends Exception
 {

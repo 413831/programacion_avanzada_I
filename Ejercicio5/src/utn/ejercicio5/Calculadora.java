@@ -3,6 +3,8 @@ package utn.ejercicio5;
 /**
  * Clase para realizar operaciones aritméticas
  * Implementa interfaz ICalcular
+ * @author Alejandro Planes
+ * @version 1.0
  */
 public class Calculadora implements ICalcular
 {

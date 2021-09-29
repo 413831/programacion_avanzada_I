@@ -2,6 +2,8 @@ package utn.ejercicio5;
 
 /**
  * Interfaz con descripción de métodos para calculor aritméticos
+ * @author Alejandro Planes
+ * @version 1.0
  */
 public interface ICalcular
 {
