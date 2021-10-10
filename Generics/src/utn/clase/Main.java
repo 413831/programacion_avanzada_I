@@ -13,6 +13,5 @@ public class Main {
         Caja<String,Persona> cajaString = new Caja<>();
         cajaString.guardar("Palabra");
         System.out.println(cajaString.sacar());
-
     }
 }

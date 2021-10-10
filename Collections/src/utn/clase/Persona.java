@@ -77,7 +77,7 @@ public class Persona implements Comparable, Serializable
     @Override
     public int compareTo(Object o)
     {
-
-        return 0;
+        Persona persona = (Persona) o;
+        return this.nombre.compareTo(persona.nombre);
     }
 }

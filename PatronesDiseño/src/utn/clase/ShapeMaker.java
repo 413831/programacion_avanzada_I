@@ -1,0 +1,30 @@
+package utn.clase;
+
+public class ShapeMaker
+{
+    private Shape circle;
+    private Shape rectangle;
+    private Shape square;
+
+    public ShapeMaker()
+    {
+        this.circle = new Circle();
+        this.rectangle = new Rectangle();
+        this.square = new Square();
+    }
+
+    void drawCircle()
+    {
+        this.circle.draw();
+    }
+
+    void drawRectangle()
+    {
+        this.rectangle.draw();
+    }
+
+    void drawSquare()
+    {
+        this.square.draw();
+    }
+}

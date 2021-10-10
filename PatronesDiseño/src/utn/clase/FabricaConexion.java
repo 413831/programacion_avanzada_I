@@ -6,11 +6,11 @@ public class FabricaConexion
     {
         if("oracle".equals(baseDeDatos))
         {
-            return new ConexionOracle();
+            return ConexionOracle.getInstance();
         }
         else if("sql".equals(baseDeDatos))
         {
-            return new ConexionSQL();
+            return ConexionSQL.getInstance();
         }
         return null;
     }

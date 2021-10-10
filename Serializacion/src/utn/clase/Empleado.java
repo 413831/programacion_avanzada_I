@@ -7,6 +7,7 @@ public class Empleado implements Serializable
 {
     private String nombre;
     private BigDecimal salario;
+    private transient int id;
 
     public String getNombre()
     {
@@ -36,5 +37,10 @@ public class Empleado implements Serializable
         sb.append(", salario=").append(salario);
         sb.append('}');
         return sb.toString();
+    }
+
+    public int getId()
+    {
+        return id;
     }
 }

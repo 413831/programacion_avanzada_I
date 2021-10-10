@@ -14,6 +14,8 @@ public class Main {
         serialize(empleado, "empleado.bin");
         Empleado empleadoDeserializado = (Empleado) deserialize("empleado.bin");
         System.out.println("empleadoDeserializado = " + empleadoDeserializado);
+
+
     }
 
     private static void serialize(Serializable objeto, String nombreArchivo)
