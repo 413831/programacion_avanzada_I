@@ -76,7 +76,7 @@ public class Auto
         if (!(o instanceof Auto)) return false;
         Auto auto = (Auto) o;
         return getPatente().equals(auto.getPatente()) && getMarca() == auto.getMarca()
-                && getModelo().equals(auto.getModelo()) && Objects.equals(getPrecio(), auto.getPrecio());
+               && getModelo().equals(auto.getModelo()) && Objects.equals(getPrecio(), auto.getPrecio());
     }
 
     @Override
