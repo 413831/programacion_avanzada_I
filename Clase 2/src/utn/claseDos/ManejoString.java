@@ -1,6 +1,5 @@
 package utn.claseDos;
 
-import java.util.Locale;
 
 public class ManejoString
 {
@@ -46,7 +45,7 @@ public class ManejoString
     {
         int posicionLetra = 0;
 
-        if(!texto.isEmpty() || !texto.isBlank())
+        if(!texto.isEmpty() && !texto.isBlank())
         {
             for (int i = 0; i < texto.length();i++)
             {
