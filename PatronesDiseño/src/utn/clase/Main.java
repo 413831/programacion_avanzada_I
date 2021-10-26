@@ -1,5 +1,15 @@
 package utn.clase;
 
+import utn.clase.adapter.BirdAdapter;
+import utn.clase.adapter.PlasticToyDuck;
+import utn.clase.adapter.Sparrow;
+import utn.clase.adapter.ToyDuck;
+import utn.clase.facade.ShapeMaker;
+import utn.clase.factory.FabricaConexion;
+import utn.clase.observer.ManejoStock;
+import utn.clase.observer.Publicaciones;
+import utn.clase.observer.ValorDolar;
+
 public class Main {
 
     public static void main(String[] args)
@@ -31,6 +41,24 @@ public class Main {
         toyDuck.squeak();
         System.out.println("BirdAdapter...");
         birdAdapter.squeak();
+
+        // Observer
+        ManejoStock manejoStock = new ManejoStock();
+        Publicaciones publicaciones = new Publicaciones();
+        ValorDolar valorDolar = new ValorDolar();
+
+        valorDolar.agregar(manejoStock);
+        valorDolar.agregar(publicaciones);
+
+        try
+        {
+            Thread.sleep(3000l);
+        }
+        catch (InterruptedException e)
+        {
+            e.printStackTrace();
+        }
+        valorDolar.setValorActual(200);
 
     }
 }

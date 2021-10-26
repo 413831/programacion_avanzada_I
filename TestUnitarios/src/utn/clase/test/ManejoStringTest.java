@@ -3,6 +3,7 @@ package utn.clase.test;
 
 import org.junit.Assert;
 import org.junit.Test;
+import utn.clase.objetos.ManejoPalabra;
 import utn.clase.objetos.ManejoString;
 import utn.clase.objetos.MiExcepcion;
 
@@ -81,6 +82,48 @@ public class ManejoStringTest
         catch (Exception e)
         {
             Assert.fail();
+        }
+    }
+
+    @Test
+    public void segundaPalabraCorrecta()
+    {
+        ManejoPalabra manejoPalabra = new ManejoPalabra();
+        String palabra = "La casa del lobo";
+        String resultado = manejoPalabra.segundaPalabra(palabra);
+        Assert.assertEquals(resultado,"casa");
+    }
+
+    @Test
+    public void lanzaExcepcionIndexOutBounds()
+    {
+        ManejoPalabra manejoPalabra = new ManejoPalabra();
+        String palabra = "La";
+        try
+        {
+            String resultado = manejoPalabra.segundaPalabra(palabra);
+            Assert.fail();
+        }
+        catch (Exception ex)
+        {
+            Assert.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void lanzaExcepcionPalabraNull()
+    {
+        ManejoPalabra manejoPalabra = new ManejoPalabra();
+        String palabra = null;
+        try
+        {
+            String resultado = manejoPalabra.segundaPalabra(palabra);
+            Assert.fail();
+        }
+        catch (Exception ex)
+        {
+            System.out.println("ex = " + ex.toString());
+            Assert.assertTrue(true);
         }
     }
 
